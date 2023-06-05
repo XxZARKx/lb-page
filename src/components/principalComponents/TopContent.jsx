@@ -57,7 +57,7 @@ const TopContent = (props) => {
         <Toolbar/>
       <Container maxWidth="xl" sx={{overflow: 'auto'}}>
         <Box sx={{height: 'max-content', marginTop: isSmallerThan600 ? '40px' : '0' }}>
-          <img src='src/assets/BANNER.png' style={{width: '100%', display: 'block'}}/>
+          <img src='src/assets/BANNER.png' alt="banner" style={{width: '100%', display: 'block'}}/>
         </Box>
       </Container>
       </div>
