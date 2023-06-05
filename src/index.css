@@ -1,0 +1,35 @@
+*{
+    font-family: 'Catamaran', sans-serif;
+}
+
+.fondoCuadriculado {
+	background-image: linear-gradient(rgba(255, 255, 255, .2) 1px, transparent 1px), 
+	                  linear-gradient(90deg, rgba(255, 255, 255, .2) 1px, transparent 1px);
+	background-size: 20px 20px, 20px 20px;
+	background-position: -2px -1px, -2px -2px;
+}
+
+.noBgText{
+    font-weight: 900;
+    -webkit-text-stroke: 1px white;
+}
+
+.courseType{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.descripcion{
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.miniDescription{
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
