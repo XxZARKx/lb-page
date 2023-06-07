@@ -1,34 +1,13 @@
-import { makeStyles } from '@mui/styles';
-import { useMediaQuery } from '@mui/material';
-
-const useStyles = makeStyles({
-  rightPosition: {
-    position: 'absolute',
-    right: 0,
-  },
-  leftPosition: {
-    position: 'absolute',
-    left: 0,
-  },
-  topPosition: {
-    position: 'absolute',
-    top: 0,
-  },
-  bottomPosition: {
-    xs: '',
-    bottom: 0,
-  },
-});
-
+import rightArrow from '../../../assets/rightArrow.png'
+import leftArrow from '../../../assets/leftArrow.png'
 
   export const NextArrow = (props) => {
 
-    const classes = useStyles()
     // eslint-disable-next-line react/prop-types
     const {onClick} = props;
     return (
       <div style={{position: 'relative', cursor: 'pointer'}} onClick={onClick}>
-        <img src="src/assets/rightArrow.png" style={{position: 'absolute', bottom: '250px', right: '-40px', border: '2px solid black', padding:'5px 7px', borderRadius:'50%', cursor: 'pointer'}}/>
+        <img src={rightArrow} style={{position: 'absolute', bottom: '250px', right: '-40px', border: '2px solid black', padding:'5px 7px', borderRadius:'50%', cursor: 'pointer'}}/>
       </div>
     );
   };
@@ -40,7 +19,7 @@ const useStyles = makeStyles({
       <div
         onClick={onClick}
       >
-        <img src="src/assets/leftArrow.png" style={{position: 'absolute', bottom: '250px', left: '-40px', border: '2px solid black', padding:'5px 7px', borderRadius:'50%', cursor: 'pointer'}}/>
+        <img src={leftArrow} style={{position: 'absolute', bottom: '250px', left: '-40px', border: '2px solid black', padding:'5px 7px', borderRadius:'50%', cursor: 'pointer'}}/>
       </div>
     );
   };
@@ -97,10 +76,10 @@ const useStyles = makeStyles({
         },
       },
       {
-        breakpoint: 1150,
+        breakpoint: 1180,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           initialSlide: 1,
         },
       },

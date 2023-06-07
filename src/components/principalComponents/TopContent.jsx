@@ -4,11 +4,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import CssBaseline from '@mui/material/CssBaseline';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Slide from '@mui/material/Slide';
 import Grid from '@mui/material/Grid';
-import { useTheme, useMediaQuery } from '@mui/material';
+
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -35,15 +33,23 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-const TopContent = (props) => {
-
-  const theme = useTheme();
-  const isSmallerThan600 = useMediaQuery(theme.breakpoints.down('sm'));
+const TopContent = () => {
 
     return(
         <div>
-      <CssBaseline />
-      <HideOnScroll {...props}>
+          <CssBaseline />
+            <TopText />
+            <Toolbar />
+        </div>
+    )
+}
+
+export default TopContent
+
+// eslint-disable-next-line react/prop-types
+export const TopText = () => {
+  return(
+    <HideOnScroll>
         <AppBar sx={{ backgroundColor: '#F4F4F4', boxShadow: 'none'}}>
           <Toolbar sx={{ justifyContent: 'center'}}>
             <Grid item xs={12}>
@@ -54,14 +60,5 @@ const TopContent = (props) => {
           </Toolbar>
         </AppBar>
       </HideOnScroll>
-        <Toolbar/>
-      <Container maxWidth="xl" sx={{overflow: 'auto'}}>
-        <Box sx={{height: 'max-content', marginTop: isSmallerThan600 ? '40px' : '0' }}>
-          <img src='src/assets/BANNER.png' alt="banner" style={{width: '100%', display: 'block'}}/>
-        </Box>
-      </Container>
-      </div>
-    )
+  )
 }
-
-export default TopContent

@@ -33,3 +33,19 @@
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 }
+
+.descripcionFooter{
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+a{
+	color: "";
+	text-decoration: none;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
