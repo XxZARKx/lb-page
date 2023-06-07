@@ -1,50 +1,14 @@
 import { useParams } from "react-router-dom";
-import { Container } from '@mui/material';
-import { Box } from '@mui/material';
+import { Container, Box } from '@mui/material';
 import logo from '../../../assets/icons/logo.png'
 import Buttons from "../Buttons";
 import Divider from '@mui/joy/Divider'
+import { products } from "../../../data/CoursesPreviewData";
+import CardsCourses from "../CardsCourses";
+import { firstCarouselCourses, bootcampCarousel, asesoriaCarousel } from '../../../data/CoursesData'
 
 export const ProductView = () => {
   const { id } = useParams();
-
-  const products = [
-    {
-      id: 1,
-      name: 'Producto 1',
-      price: '$10.00',
-    },
-    {
-      id: 2,
-      name: 'Producto 2',
-      price: '$15.00',
-    },
-    {
-      id: 3,
-      name: 'Producto 3',
-      price: '$20.00',
-    },
-    {
-      id: 4,
-      name: 'Producto 4',
-      price: '$25.00',
-    },
-    {
-      id: 5,
-      name: 'Producto 5',
-      price: '$30.00',
-    },
-    {
-      id: 6,
-      name: 'Producto 6',
-      price: '$35.00',
-    },
-    {
-      id: 7,
-      name: 'Producto 7',
-      price: '$40.00',
-    },
-  ];
 
   // Buscar el producto correspondiente según el ID en la URL
   const product = products.find((p) => p.id === parseInt(id));
@@ -62,10 +26,10 @@ export const ProductView = () => {
           <Buttons/>
           <Box>
             <div>
-              {/* component */}
+              <CardsCourses courses={bootcampCarousel}/>
             </div>
             <div>
-              {/* component big */}
+              {product.id}
             </div>
             <article>
               <p>Asesoría Personalizada para creación de CV (con Exp/sin Exp)</p>

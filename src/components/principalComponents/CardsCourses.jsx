@@ -13,7 +13,7 @@ import redcamera from '../../assets/icons/redCamera.png'
 import logo from '../../assets/icons/logo.png'
 import { Link } from "react-router-dom";
 
-const CardsCourses = ({courses, settings}) => {
+const CardsCourses = ({ courses, settings}) => {
 
 
   const breakpoints = {

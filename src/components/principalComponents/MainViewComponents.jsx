@@ -25,10 +25,12 @@ const MainViewComponents = () => {
         <Divider sx={{height: '3px', backgroundColor: '#f4f4f4', marginY: '30px'}}/>
         <h2 style={{textAlign: 'center', fontSize: '35px'}}>#EmpleabilidadLaborum </h2>
         <Divider sx={{height: '3px', backgroundColor: '#f4f4f4', marginY: '30px'}}/>
+
         <div ref={elemento1Ref}>
           <GroupCourses courses={bootcampCarousel} settings={settingsThreeElements} color={'#FFC000'} imgSrc={peopleIcon} alt="bootcamps" type={'BOOTCAMPS'} />
         </div>
         <Toolbar/>
+        
         <div ref={elemento2Ref}>
           <GroupCourses courses={asesoriaCarousel} settings={settingsThreeElements} color={'#DF321A'} imgSrc={chatIcon} alt="asesorias" type={'ASESORÍAS'} />
         </div>
